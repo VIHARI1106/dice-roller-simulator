@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pikachu Face - Both Ears Behind</title>
+  <style>
+    :root {
+      --bordercolor: #0A0A0A;
+      --pikachu-yellow: #fed823;
+      --pikachu-red: #e94e24;
+      --pikachu-dark-brown: #231815;
+    }
+
+    body {
+      background: #1f1f1f;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 220px;
+      height: 250px;
+    }
+
+    /* LEFT EAR (back) */
+    .ear-left {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 36px;
+      height: 140px;
+      background: var(--pikachu-yellow);
+      transform: rotate(-35deg);
+      border-top-left-radius: 100% 100%;
+      border-top-right-radius: 100% 100%;
+      border-bottom-left-radius: 60% 60%;
+      overflow: hidden;
+      border: 3px solid var(--bordercolor);
+      z-index: 1;
+    }
+
+    .ear-left::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      top: 0;
+      background: var(--pikachu-dark-brown);
+      border-bottom: 3px solid var(--bordercolor);
+    }
+
+    /* RIGHT EAR (back) */
+    .ear-right {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width: 36px;
+      height: 140px;
+      background: var(--pikachu-yellow);
+      transform: rotate(45deg);
+      border-top-left-radius: 100% 100%;
+      border-top-right-radius: 100% 100%;
+      border-bottom-left-radius: 60% 60%;
+      overflow: hidden;
+      border: 3px solid var(--bordercolor);
+      z-index: 1;
+    }
+
+    .ear-right::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      top: 0;
+      background: var(--pikachu-dark-brown);
+      border-bottom: 3px solid var(--bordercolor);
+    }
+
+    /* HEAD */
+    .pik-head {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: var(--pikachu-yellow);
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top-left-radius: 130px 120px;
+      border-top-right-radius: 150px 100px;
+      border-bottom-left-radius: 80px 80px;
+      border-bottom-right-radius: 25px 120px;
+      border: 3px solid var(--bordercolor);
+      border-bottom: none;
+      z-index: 2;
+    }
+
+    .pik-head:before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 70px;
+      background: var(--pikachu-yellow);
+      border-left: 4px solid var(--bordercolor);
+      left: -14px;
+      top: 81px;
+      transform: rotateZ(-28deg);
+      border-top-left-radius: 150% 90px;
+      border-bottom-left-radius: 150% 90px;
+    }
+
+    .pik-head:after {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 40px;
+      background: var(--pikachu-red);
+      border-radius: 50%;
+      left: -18px;
+      top: 80px;
+      border: 3px solid var(--bordercolor);
+    }
+
+    .cheek-right {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--pikachu-red);
+      border: 3px solid var(--bordercolor);
+      top: 90px;
+      right: 18px;
+    }
+
+    .eye-right, .eye-left {
+      position: absolute;
+      background: var(--bordercolor);
+      border-radius: 50%;
+    }
+
+    .eye-right {
+      width: 30px;
+      height: 33px;
+      top: 57px;
+      right: 36px;
+    }
+
+    .eye-right::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      left: 8px;
+      top: 5px;
+    }
+
+    .eye-left {
+      width: 20px;
+      height: 32px;
+      transform: rotateZ(10deg);
+      top: 50px;
+      left: 10px;
+    }
+
+    .eye-left::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 13px;
+      background: white;
+      border-radius: 50%;
+      transform: rotateZ(8deg);
+      left: 10px;
+      top: 5px;
+    }
+
+    .nose {
+      position: absolute;
+      width: 10px;
+      height: 11px;
+      background: var(--bordercolor);
+      top: 75px;
+      left: 40px;
+      border-radius: 0% 50% 30% 50%;
+      transform: rotateZ(-36deg);
+    }
+
+    .mouth {
+      position: absolute;
+      width: 25px;
+      height: 20px;
+      border-radius: 0 0 100% 0;
+      border-bottom: 4px solid var(--bordercolor);
+      border-right: 3px solid var(--bordercolor);
+      top: 90px;
+      left: 48px;
+      transform: rotateZ(55deg);
+    }
+
+    .mouth::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 15px;
+      border-radius: 0 0 90% 0;
+      border-bottom: 4px solid var(--bordercolor);
+      border-right: 3px solid var(--bordercolor);
+      top: 22px;
+      right: 20px;
+      transform: rotateZ(-10deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ear-left"></div>
+    <div class="ear-right"></div>
+
+    <div class="pik-head">
+      <div class="eye-left"></div>
+      <div class="eye-right"></div>
+      <div class="cheek-right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+</body>
+</html>
